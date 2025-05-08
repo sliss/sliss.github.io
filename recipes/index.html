@@ -506,25 +506,27 @@
       // Convert recipes to array for sorting
       const recipes = Array.from(recipeGrid.children);
 
-      // Calculate and add protein:calorie ratio to each recipe tile
+      // Calculate and add protein percentage to each recipe tile
       recipes.forEach(recipe => {
         const protein = parseFloat(recipe.dataset.protein || 0);
         const calories = parseFloat(recipe.dataset.calories || 1);
-        const ratio = protein / calories;
-        const ratioFormatted = ratio.toFixed(2);
+        // Calculate percentage of calories from protein (protein is 4 cal per gram)
+        const proteinCalories = protein * 4;
+        const percentProtein = (proteinCalories / calories) * 100;
+        const percentFormatted = percentProtein.toFixed(0);
 
-        // Add ratio to the dataset for sorting
-        recipe.dataset.ratio = ratio;
+        // Add percentage to the dataset for sorting
+        recipe.dataset.percentProtein = percentProtein;
 
-        // Add ratio to the display
+        // Add percentage to the display
         const nutritionInfo = recipe.querySelector('.nutrition-info');
         const currentText = nutritionInfo.textContent;
 
         // Check if text ends with asterisk to preserve the AI-inferred indicator
         if (currentText.endsWith('*')) {
-          nutritionInfo.textContent = `${currentText.slice(0, -1)} | ${ratioFormatted}*`;
+          nutritionInfo.textContent = `${currentText.slice(0, -1)} | ${percentFormatted}% protein*`;
         } else {
-          nutritionInfo.textContent = `${currentText} | ${ratioFormatted}`;
+          nutritionInfo.textContent = `${currentText} | ${percentFormatted}% protein`;
         }
       });
 
@@ -554,8 +556,8 @@
             // Sort by protein content (highest first)
             return parseFloat(b.dataset.protein || 0) - parseFloat(a.dataset.protein || 0);
           } else if (sortMethod === 'ratio') {
-            // Sort by protein-to-calorie ratio (highest first)
-            return parseFloat(b.dataset.ratio || 0) - parseFloat(a.dataset.ratio || 0);
+            // Sort by protein percentage (highest first)
+            return parseFloat(b.dataset.percentProtein || 0) - parseFloat(a.dataset.percentProtein || 0);
           }
         });
 
