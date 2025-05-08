@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style type="text/css">
     body {
       font-family: HelveticaNeue, sans-serif;
@@ -12,113 +13,339 @@
     }
 
     h1 {
-      font-size: 16px;
+      font-size: 24px;
       font-family: HelveticaNeue, sans-serif;
       font-weight: normal;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    li {
-      margin: 6px 0;
+      margin-bottom: 30px;
     }
 
     a {
       color: #4990E2;
       text-decoration: none;
     }
+
+    .recipe-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .recipe-tile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .recipe-tile:hover {
+      transform: translateY(-5px);
+    }
+
+    .image-placeholder {
+      width: 180px;
+      height: 180px;
+      background-color: #f5f5f5;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    .recipe-image {
+      width: 180px;
+      height: 180px;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      object-fit: cover;
+    }
+
+    .recipe-name {
+      font-size: 16px;
+      margin-top: 0;
+      padding: 0 10px;
+      line-height: 1.3;
+    }
+
+    @media (max-width: 768px) {
+      .recipe-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 15px;
+      }
+
+      .image-placeholder,
+      .recipe-image {
+        width: 140px;
+        height: 140px;
+      }
+    }
   </style>
 </head>
 
 <body>
-  <h1> (37)</h1>
-  <ul>
+  <h1>Recipes (37)</h1>
 
-    <li><a href="/recipes/5-minute-healthy-oatmeal.html">5-Minute Healthy Oatmeal</a></li>
+  <div class="recipe-grid">
+    <a href="/recipes/5-minute-healthy-oatmeal.html" class="recipe-tile">
+      <img
+        src="Images/F51E388E-F60D-4313-BB80-C94AB3097813-652-00000039B16B095C/F346ADF1-4E6A-4FF4-A70D-68FFB2990A12-652-0000003A13EA96B4.jpg"
+        class="recipe-image" alt="5-Minute Healthy Oatmeal">
+      <h3 class="recipe-name">5-Minute Healthy Oatmeal</h3>
+    </a>
 
-    <li><a href="/recipes/anadama-american-loaf-bread.html">Anadama American Loaf Bread</a></li>
+    <a href="/recipes/anadama-american-loaf-bread.html" class="recipe-tile">
+      <img
+        src="Images/21411245-B699-4C0A-9651-F4FFA51B624D-3670-0000023E65FAD833/BA9A0C3B-BC70-49E5-BFBE-347F87FEA756-3999-000002809D83B8D9.jpg"
+        class="recipe-image" alt="Anadama American Loaf Bread">
+      <h3 class="recipe-name">Anadama American Loaf Bread</h3>
+    </a>
 
-    <li><a href="/recipes/banana-bread.html">Banana Bread</a></li>
+    <a href="/recipes/banana-bread.html" class="recipe-tile">
+      <img
+        src="Images/2EA2FB93-4D04-4A3B-8D3D-E689C400BA26-9432-000004D99FA20BD8/B15E96E5-7671-4E83-A94D-A90578553AFF-9432-000004D9D8484F84.jpg"
+        class="recipe-image" alt="Banana Bread">
+      <h3 class="recipe-name">Banana Bread</h3>
+    </a>
 
-    <li><a href="/recipes/beefturkey-chili.html">Beef/Turkey Chili</a></li>
+    <a href="/recipes/beefturkey-chili.html" class="recipe-tile">
+      <img
+        src="Images/59AE6F0E-070B-4B63-A68A-032ECAE66A73-5230-0000021912825F3C/7F82BCC7-E0BD-431A-9B23-BB64FD2A2506-8132-0000036AB520337B.jpg"
+        class="recipe-image" alt="Beef/Turkey Chili">
+      <h3 class="recipe-name">Beef/Turkey Chili</h3>
+    </a>
 
-    <li><a href="/recipes/best-banana-bread.html">Best Banana Bread</a></li>
+    <a href="/recipes/best-banana-bread.html" class="recipe-tile">
+      <img
+        src="Images/4A91F857-5ECA-4A89-89E3-F1FB6DC15E47-31739-00000FEA8831B48D/16CA5486-CB5A-4C9B-A3D8-0B15A4BB9237-31739-00000FEB80B3532D.jpg"
+        class="recipe-image" alt="Best Banana Bread">
+      <h3 class="recipe-name">Best Banana Bread</h3>
+    </a>
 
-    <li><a href="/recipes/bishop-sauce.html">Bishop Sauce</a></li>
+    <a href="/recipes/bishop-sauce.html" class="recipe-tile">
+      <div class="image-placeholder">Image</div>
+      <h3 class="recipe-name">Bishop Sauce</h3>
+    </a>
 
-    <li><a href="/recipes/challah-i.html">Challah I</a></li>
+    <a href="/recipes/challah-i.html" class="recipe-tile">
+      <img
+        src="Images/E85C5149-E169-4A90-9522-DB1A555D13F9-12484-0000063545515D1C/EDDFBE3C-12DF-445C-8E91-390C2D49B2C2-15952-000006A015CAAE8F.jpg"
+        class="recipe-image" alt="Challah I">
+      <h3 class="recipe-name">Challah I</h3>
+    </a>
 
-    <li><a href="/recipes/chilled-cucumber-soup-with-avocado-toast.html">Chilled Cucumber Soup with Avocado Toast</a>
-    </li>
+    <a href="/recipes/chilled-cucumber-soup-with-avocado-toast.html" class="recipe-tile">
+      <img
+        src="Images/50F310DC-51EB-4ACD-BF59-73EEB918A223-5493-000002685B1E4241/D0117026-C6C5-402C-9DE4-8B15C4372DE4-5493-00000268A775EF0B.jpg"
+        class="recipe-image" alt="Chilled Cucumber Soup with Avocado Toast">
+      <h3 class="recipe-name">Chilled Cucumber Soup with Avocado Toast</h3>
+    </a>
 
-    <li><a href="/recipes/crock-pot-potato-bacon-leek-soup.html">Crock Pot Potato Bacon Leek Soup</a></li>
+    <a href="/recipes/crock-pot-potato-bacon-leek-soup.html" class="recipe-tile">
+      <img
+        src="Images/B1B067D4-170E-41C5-8726-AA5E81D548F4-30042-00000E6FB7CF2F77/08768144-D91B-4461-A1C5-9EA1B44481B7-30042-00000E6FF234BD3C.jpg"
+        class="recipe-image" alt="Crock Pot Potato Bacon Leek Soup">
+      <h3 class="recipe-name">Crock Pot Potato Bacon Leek Soup</h3>
+    </a>
 
-    <li><a href="/recipes/delicious-orange-ginger-glazed-salmon.html">Delicious Orange Ginger Glazed Salmon</a></li>
+    <a href="/recipes/delicious-orange-ginger-glazed-salmon.html" class="recipe-tile">
+      <img
+        src="Images/A33376BF-84B2-4028-8DC1-68FAC4042CD8-6390-0000033EB6C91D7C/1DE9D9C3-67E0-42F4-98C2-C7BDAA32AA7E-8996-0000044DE8BECDED.jpg"
+        class="recipe-image" alt="Delicious Orange Ginger Glazed Salmon">
+      <h3 class="recipe-name">Delicious Orange Ginger Glazed Salmon</h3>
+    </a>
 
-    <li><a href="/recipes/fig-and-brie-burger.html">Fig and Brie Burger</a></li>
+    <a href="/recipes/fig-and-brie-burger.html" class="recipe-tile">
+      <img
+        src="Images/397C5B92-7464-4793-9057-AF59DAFC85BA-3541-00004425AC4B9E87/7DA598B7-DBB4-49C5-99C6-E155386B2B1C-35735-00001F8534D39037.jpg"
+        class="recipe-image" alt="Fig and Brie Burger">
+      <h3 class="recipe-name">Fig and Brie Burger</h3>
+    </a>
 
-    <li><a href="/recipes/french-pain-d-epi-wheat-stalk-bread.html">French Pain D'Epi Wheat Stalk Bread</a></li>
+    <a href="/recipes/french-pain-d-epi-wheat-stalk-bread.html" class="recipe-tile">
+      <img
+        src="Images/5DA97A6F-6DE4-4F84-A73F-20B4B586B6BA-7003-000003DAB8AB34DF/3CC5A3A7-EA16-448D-A1E5-9134341FEEEF-7003-000003DABF72158D.jpg"
+        class="recipe-image" alt="French Pain D'Epi Wheat Stalk Bread">
+      <h3 class="recipe-name">French Pain D'Epi Wheat Stalk Bread</h3>
+    </a>
 
-    <li><a href="/recipes/garlic-butter-baked-salmon.html">Garlic Butter Baked Salmon</a></li>
+    <a href="/recipes/garlic-butter-baked-salmon.html" class="recipe-tile">
+      <img
+        src="Images/23F43559-D296-456B-9A43-5BECA5B9A6D2-5900-000003EB83FAC08A/3DEFD8D9-8475-4EC9-BA3C-D336DC0A84F2-2336-00000155396FC127.jpg"
+        class="recipe-image" alt="Garlic Butter Baked Salmon">
+      <h3 class="recipe-name">Garlic Butter Baked Salmon</h3>
+    </a>
 
-    <li><a href="/recipes/grilled-goat-cheese-pepper.html">Grilled Goat Cheese Pepper</a></li>
+    <a href="/recipes/grilled-goat-cheese-pepper.html" class="recipe-tile">
+      <div class="image-placeholder">Image</div>
+      <h3 class="recipe-name">Grilled Goat Cheese Pepper</h3>
+    </a>
 
-    <li><a href="/recipes/hearty-lentil-stew.html">Hearty Lentil Stew</a></li>
+    <a href="/recipes/hearty-lentil-stew.html" class="recipe-tile">
+      <img
+        src="Images/2A766DEA-78F9-4D13-9AD5-07BA14B0CE46-652-0000003B8156DBF5/E35B1AA2-2365-4B20-925A-6A408BE07699-12484-000006089FB7CA9B.jpg"
+        class="recipe-image" alt="Hearty Lentil Stew">
+      <h3 class="recipe-name">Hearty Lentil Stew</h3>
+    </a>
 
-    <li><a href="/recipes/herbed-popcorn.html">Herbed Popcorn</a></li>
+    <a href="/recipes/herbed-popcorn.html" class="recipe-tile">
+      <img
+        src="Images/901AA892-16B3-4BD5-B2FB-C81D02E46917-4472-00000313979BB394/6567FFC5-0131-44E0-A755-D0F4BAF80A1D-4472-00000313F67AD581.jpg"
+        class="recipe-image" alt="Herbed Popcorn">
+      <h3 class="recipe-name">Herbed Popcorn</h3>
+    </a>
 
-    <li><a href="/recipes/homemade-dutch-oven-bread.html">Homemade Dutch Oven Bread</a></li>
+    <a href="/recipes/homemade-dutch-oven-bread.html" class="recipe-tile">
+      <img
+        src="Images/1184D41D-234D-4E2A-8A35-533B7520AF83-9945-0000048A257364E5/D60DE0CB-5777-4647-800E-0779BE0F1306-36885-0000110C35731260.jpg"
+        class="recipe-image" alt="Homemade Dutch Oven Bread">
+      <h3 class="recipe-name">Homemade Dutch Oven Bread</h3>
+    </a>
 
-    <li><a href="/recipes/how-to-make-croissants.html">How to Make Croissants</a></li>
+    <a href="/recipes/how-to-make-croissants.html" class="recipe-tile">
+      <img
+        src="Images/9DFDA211-38CB-4A7F-89E0-B0EBAE5AB4D1-7003-000003DADAFF1CFE/73FCC223-A495-45D9-820D-2C070AA272B1-7003-000003DB12108845.jpg"
+        class="recipe-image" alt="How to Make Croissants">
+      <h3 class="recipe-name">How to Make Croissants</h3>
+    </a>
 
-    <li><a href="/recipes/instant-pot-beef-stew.html">Instant Pot Beef Stew</a></li>
+    <a href="/recipes/instant-pot-beef-stew.html" class="recipe-tile">
+      <img
+        src="Images/9A8D51A5-6DE1-4A41-A7AB-25B2C7CF7CDF-5056-0000034D4CD1E9A4/255D8D82-568A-4762-BE3E-F33A87A756F1-5056-000003773EA780E9.jpg"
+        class="recipe-image" alt="Instant Pot Beef Stew">
+      <h3 class="recipe-name">Instant Pot Beef Stew</h3>
+    </a>
 
-    <li><a href="/recipes/instant-pot-chicken-noodle-soup.html">Instant Pot Chicken Noodle Soup</a></li>
+    <a href="/recipes/instant-pot-chicken-noodle-soup.html" class="recipe-tile">
+      <img
+        src="Images/763293D6-B725-4685-977C-A6FA5C688A96-9945-00000488854AFB6B/2381CECB-4336-48C0-A606-EA5FD08AD5F6-11511-000005359917CE9E.jpg"
+        class="recipe-image" alt="Instant Pot Chicken Noodle Soup">
+      <h3 class="recipe-name">Instant Pot Chicken Noodle Soup</h3>
+    </a>
 
-    <li><a href="/recipes/instant-pot-eastern-carolina-bbq-pulled-pork.html">Instant Pot Eastern Carolina BBQ Pulled
-        Pork</a>
-    </li>
+    <a href="/recipes/instant-pot-eastern-carolina-bbq-pulled-pork.html" class="recipe-tile">
+      <img
+        src="Images/BBDA124A-7624-4F08-9EBF-CBC2FC496ECA-11343-000005C8522C4F45/B318191D-6F77-48F5-8C47-9765E91CE25E-1142-0000007FEF7A21A2.jpg"
+        class="recipe-image" alt="Instant Pot Eastern Carolina BBQ Pulled Pork">
+      <h3 class="recipe-name">Instant Pot Eastern Carolina BBQ Pulled Pork</h3>
+    </a>
 
-    <li><a href="/recipes/instant-pot-mushroom-risotto.html">Instant Pot Mushroom Risotto</a></li>
+    <a href="/recipes/instant-pot-mushroom-risotto.html" class="recipe-tile">
+      <img
+        src="Images/92781529-7176-464E-BF74-D264160C5154-4703-00000249F31A74D3/60E09B4D-2293-4205-8DE7-9702C0B21FF7-4703-0000024A1DD915FF.jpg"
+        class="recipe-image" alt="Instant Pot Mushroom Risotto">
+      <h3 class="recipe-name">Instant Pot Mushroom Risotto</h3>
+    </a>
 
-    <li><a href="/recipes/ip-chicken-breast-soup.html">IP Chicken Breast Soup</a></li>
+    <a href="/recipes/ip-chicken-breast-soup.html" class="recipe-tile">
+      <img
+        src="Images/CAE9CF79-1E0D-477C-88DA-616BA9C2387F-18831-000007A889D245EF/AD0D3BB7-7998-401F-AC64-BA8D2C85D028-18831-000007A8C363E555.jpg"
+        class="recipe-image" alt="IP Chicken Breast Soup">
+      <h3 class="recipe-name">IP Chicken Breast Soup</h3>
+    </a>
 
-    <li><a href="/recipes/ip-potato-corn-chowder.html">IP Potato Corn Chowder</a></li>
+    <a href="/recipes/ip-potato-corn-chowder.html" class="recipe-tile">
+      <img
+        src="Images/3AB828CE-70B1-46D4-A96C-49019131125B-9606-000008108483B03D/86717E5B-3209-4977-968B-55E198FFEEAC-9606-00000811F63CA556.jpg"
+        class="recipe-image" alt="IP Potato Corn Chowder">
+      <h3 class="recipe-name">IP Potato Corn Chowder</h3>
+    </a>
 
-    <li><a href="/recipes/julia-child-s-beef-bourguignon.html">Julia Child's Beef Bourguignon</a></li>
+    <a href="/recipes/julia-child-s-beef-bourguignon.html" class="recipe-tile">
+      <img
+        src="Images/1F0A1DA1-4C94-43EE-8F41-66E0CE31928E-8084-0000045C42EFDB45/A546A608-6B9A-4525-9B43-7B16A2282740-8084-0000045C4AA5CD78.jpg"
+        class="recipe-image" alt="Julia Child's Beef Bourguignon">
+      <h3 class="recipe-name">Julia Child's Beef Bourguignon</h3>
+    </a>
 
-    <li><a href="/recipes/lemon-garlic-chicken-stir-fry.html">Lemon Garlic Chicken Stir Fry</a></li>
+    <a href="/recipes/lemon-garlic-chicken-stir-fry.html" class="recipe-tile">
+      <img
+        src="Images/C9A29B6E-739E-42DC-8957-DE76A1E78962-2921-0000017F02D9CD17/E6C893A8-ADC1-4154-A3DD-2649FB72603C-2921-000001814700441E.jpg"
+        class="recipe-image" alt="Lemon Garlic Chicken Stir Fry">
+      <h3 class="recipe-name">Lemon Garlic Chicken Stir Fry</h3>
+    </a>
 
-    <li><a href="/recipes/lemon-pound-cake-with-lemon-poppy-seed-buttercream.html">Lemon Pound Cake with Lemon Poppy
-        Seed
-        Buttercream</a></li>
+    <a href="/recipes/lemon-pound-cake-with-lemon-poppy-seed-buttercream.html" class="recipe-tile">
+      <img
+        src="Images/9BA05AD8-0BD8-401D-BA97-887B13305F5C-48590-000014E8A575399C/91682E7C-D4A9-4F34-9169-E71863FC237F-48590-000014E8C3BED1F2.jpg"
+        class="recipe-image" alt="Lemon Pound Cake with Lemon Poppy Seed Buttercream">
+      <h3 class="recipe-name">Lemon Pound Cake with Lemon Poppy Seed Buttercream</h3>
+    </a>
 
-    <li><a href="/recipes/lyonaise-vinegar-chicken.html">Lyonaise Vinegar Chicken</a></li>
+    <a href="/recipes/lyonaise-vinegar-chicken.html" class="recipe-tile">
+      <img
+        src="Images/74298CB5-AE96-4047-BE63-DEC55339DCE4-5031-000002F8D760F872/34691E21-3416-4401-AD4F-537FA53DA6D8-5031-000002FB7F067518.jpg"
+        class="recipe-image" alt="Lyonaise Vinegar Chicken">
+      <h3 class="recipe-name">Lyonaise Vinegar Chicken</h3>
+    </a>
 
-    <li><a href="/recipes/mulled-wine.html">Mulled Wine</a></li>
+    <a href="/recipes/mulled-wine.html" class="recipe-tile">
+      <img
+        src="Images/F465D71A-7EFD-479F-91E0-06B723F864AC-11692-000005416EE87046/C643F14B-768F-4B75-A9F9-8E9CE914D7EB-11692-00000541BDC83089.jpg"
+        class="recipe-image" alt="Mulled Wine">
+      <h3 class="recipe-name">Mulled Wine</h3>
+    </a>
 
-    <li><a href="/recipes/pan-seared-tuna-with-avocado-soy-ginger-and-lime.html">Pan-Seared Tuna with Avocado, Soy,
-        Ginger, and
-        Lime</a></li>
+    <a href="/recipes/pan-seared-tuna-with-avocado-soy-ginger-and-lime.html" class="recipe-tile">
+      <img
+        src="Images/CBB80336-A441-4FDD-9520-81AD4B83D06E-1631-000000C8B744C483/5BC4E21A-E37F-489E-AA5C-9E088E2DE7E0-1631-000000C904E9D2F5.jpg"
+        class="recipe-image" alt="Pan-Seared Tuna with Avocado, Soy, Ginger, and Lime">
+      <h3 class="recipe-name">Pan-Seared Tuna with Avocado, Soy, Ginger, and Lime</h3>
+    </a>
 
-    <li><a href="/recipes/quick-easy-crispy-tofu.html">Quick & Easy Crispy Tofu</a></li>
+    <a href="/recipes/quick-easy-crispy-tofu.html" class="recipe-tile">
+      <img
+        src="Images/C03B96AF-4E7E-455F-8831-1CAB769D51E6-17984-00000795895DE443/9C41C4F9-8883-4617-B91C-32FD9A17FBAD-17984-00000796173C9402.jpg"
+        class="recipe-image" alt="Quick & Easy Crispy Tofu">
+      <h3 class="recipe-name">Quick & Easy Crispy Tofu</h3>
+    </a>
 
-    <li><a href="/recipes/roasted-cauliflower.html">Roasted Cauliflower</a></li>
+    <a href="/recipes/roasted-cauliflower.html" class="recipe-tile">
+      <img
+        src="Images/6E843B90-3F63-4F23-87D4-33EB0F0187A6-5900-000003F2808245FF/A25E66E3-395E-4ABC-8E0E-2305E4AA770F-5900-000003F2A951A8BD.jpg"
+        class="recipe-image" alt="Roasted Cauliflower">
+      <h3 class="recipe-name">Roasted Cauliflower</h3>
+    </a>
 
-    <li><a href="/recipes/roasted-chicken-and-veggies.html">ROASTED CHICKEN AND VEGGIES</a></li>
+    <a href="/recipes/roasted-chicken-and-veggies.html" class="recipe-tile">
+      <img
+        src="Images/67AA493C-E7A4-4BEB-87BE-23867C77C018-6030-000003D75349863F/AB93F9CB-1EF9-4A2C-BCCA-1B46684A7A54-6030-000003D91950E480.jpg"
+        class="recipe-image" alt="Roasted Chicken and Veggies">
+      <h3 class="recipe-name">Roasted Chicken and Veggies</h3>
+    </a>
 
-    <li><a href="/recipes/slow-cooker-chicken-quinoa-tortilla-soup.html">Slow Cooker Chicken & Quinoa Tortilla Soup</a>
-    </li>
+    <a href="/recipes/slow-cooker-chicken-quinoa-tortilla-soup.html" class="recipe-tile">
+      <img
+        src="Images/56245465-A839-469A-AD0C-F459D20BBEC2-6030-000003DBDC19E61D/EF9B6ED7-6B3A-4CE8-B0DA-6F174B13D866-8548-000005641FFEF65E.jpg"
+        class="recipe-image" alt="Slow Cooker Chicken & Quinoa Tortilla Soup">
+      <h3 class="recipe-name">Slow Cooker Chicken & Quinoa Tortilla Soup</h3>
+    </a>
 
-    <li><a href="/recipes/turmeric-latte--golden-milk-.html">Turmeric Latte {Golden Milk}</a></li>
+    <a href="/recipes/turmeric-latte--golden-milk-.html" class="recipe-tile">
+      <img
+        src="Images/FA4096F3-E417-48C2-8D1C-07DEE3CAE658-16890-00001136C0C515DE/BB2104D4-D69A-4B34-B18C-761D7993BA2B-16890-00001136E48E32BE.jpg"
+        class="recipe-image" alt="Turmeric Latte {Golden Milk}">
+      <h3 class="recipe-name">Turmeric Latte {Golden Milk}</h3>
+    </a>
 
-    <li><a href="/recipes/vegetarian-black-bean-stew.html">Vegetarian Black Bean Stew</a></li>
+    <a href="/recipes/vegetarian-black-bean-stew.html" class="recipe-tile">
+      <img
+        src="Images/3BD93765-76F7-4A6E-964A-4DBCE36CF47B-652-0000003C4186E36D/8D4212B5-5FF7-4E69-8CF0-C8F865F1D4C4-652-0000003D35C98BCF.jpg"
+        class="recipe-image" alt="Vegetarian Black Bean Stew">
+      <h3 class="recipe-name">Vegetarian Black Bean Stew</h3>
+    </a>
 
-    <li><a href="/recipes/wild-mushroom-sauce-fusilli.html">Wild Mushroom Sauce Fusilli</a></li>
-
-  </ul>
+    <a href="/recipes/wild-mushroom-sauce-fusilli.html" class="recipe-tile">
+      <img
+        src="Images/C2888F20-FFDB-4831-AED6-77513CB1366D-1878-000000C0010730C1/E42CC7A3-6B4E-4D80-8E23-5172EB8E6C89-1878-000000C21643DCDE.jpg"
+        class="recipe-image" alt="Wild Mushroom Sauce Fusilli">
+      <h3 class="recipe-name">Wild Mushroom Sauce Fusilli</h3>
+    </a>
+  </div>
 </body>
 
 </html>
