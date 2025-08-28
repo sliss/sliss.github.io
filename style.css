@@ -2,3 +2,86 @@ html {
   font-family: monospace;
   background-color: rgb(253, 233, 207);
 }
+
+/* Blog post styles */
+.blog-post {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  line-height: 1.6;
+}
+
+.blog-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 1rem;
+}
+
+.blog-header h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.8rem;
+}
+
+.blog-subtitle {
+  font-style: italic;
+  margin: 0;
+  opacity: 0.8;
+}
+
+.publication-date {
+  font-size: 0.9rem;
+  margin: 0.5rem 0 0 0;
+  opacity: 0.6;
+}
+
+.article-image {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.article-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.intro {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.generated-quotes {
+  margin: 2rem 0;
+}
+
+blockquote {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-left: 3px solid rgba(0, 0, 0, 0.2);
+  font-style: italic;
+}
+
+.commentary {
+  font-style: normal;
+  font-size: 0.9rem;
+  opacity: 0.7;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.blog-footer {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.blog-footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.blog-footer a:hover {
+  text-decoration: underline;
+}
