@@ -5,12 +5,14 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 BUILD_DIR="/tmp/ua-router-build"
 
 # --- Config ---
-# Each line: <file-suffix>:<User-Agent substring>
+# Each line: <file-suffix>:<UA1|UA2|UA3>
+# Multiple User-Agent strings per file are separated by |
 # Add new bots by creating index.<suffix>.html and adding a line here
 BOTS="
-claudebot:ClaudeBot
-oai-searchbot:OAI-SearchBot
-perplexitybot:PerplexityBot
+claudebot:ClaudeBot|Claude-SearchBot|Claude-User
+oai-searchbot:OAI-SearchBot|ChatGPT-User|GPTBot
+perplexitybot:PerplexityBot|Perplexity-User
+googlebot:Googlebot|Google-CloudVertexBot
 "
 
 # --- Check for API token ---
@@ -30,7 +32,7 @@ mkdir -p "$BUILD_DIR"
 CONSTS=""
 CHECKS=""
 
-while IFS=: read -r suffix ua_string; do
+while IFS=: read -r suffix ua_strings; do
   # Skip empty lines
   [ -z "$suffix" ] && continue
 
@@ -45,14 +47,24 @@ while IFS=: read -r suffix ua_string; do
 
   CONSTS+="const ${VAR_NAME} = \`${CONTENT}\`;"$'\n\n'
 
+  # Build a condition that checks for any of the UA strings
+  CONDITIONS=""
+  IFS='|' read -ra UA_ARRAY <<< "$ua_strings"
+  for ua in "${UA_ARRAY[@]}"; do
+    if [ -n "$CONDITIONS" ]; then
+      CONDITIONS+=" || "
+    fi
+    CONDITIONS+="ua.includes(\"${ua}\")"
+  done
+
   CHECKS+="
-      if (ua.includes(\"${ua_string}\")) {
+      if (${CONDITIONS}) {
         return new Response(${VAR_NAME}, {
           headers: { \"content-type\": \"text/html; charset=utf-8\" },
         });
       }"
 
-  echo "  Added: ${suffix} -> matches '${ua_string}'"
+  echo "  Added: ${suffix} -> matches '${ua_strings}'"
 done <<< "$BOTS"
 
 # Assemble worker.js
@@ -92,8 +104,11 @@ npx wrangler deploy
 
 echo ""
 echo "Done! Test with:"
-while IFS=: read -r suffix ua_string; do
+while IFS=: read -r suffix ua_strings; do
   [ -z "$suffix" ] && continue
-  echo "  curl -s -H 'User-Agent: ${ua_string}/1.0' https://stevenliss.com"
+  IFS='|' read -ra UA_ARRAY <<< "$ua_strings"
+  for ua in "${UA_ARRAY[@]}"; do
+    echo "  curl -s -H 'User-Agent: ${ua}/1.0' https://stevenliss.com"
+  done
 done <<< "$BOTS"
 echo "  curl -s https://stevenliss.com  # normal traffic"
