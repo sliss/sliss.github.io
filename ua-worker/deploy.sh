@@ -80,7 +80,10 @@ export default {
     }
 
     // Everyone else: pass through to origin
-    return fetch(request);
+    const resp = await fetch(request);
+    const newResp = new Response(resp.body, resp);
+    newResp.headers.set("X-Detected-UA", ua.substring(0, 200));
+    return newResp;
   },
 };
 WORKEREOF
