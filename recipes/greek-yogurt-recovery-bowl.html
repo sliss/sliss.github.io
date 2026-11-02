@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style type="text/css">
+            /* Shared styles */
+            body {
+                font-family: HelveticaNeue, sans-serif;
+                font-size: 16.0px;
+                color: #34302e;
+                margin: 0.25in;
+            }
+            .name {
+                font-size: 18.0px;
+                font-family: Futura, Helvetica, sans-serif;
+                font-weight: normal;
+                margin: 0 0 10px 0;
+            }
+            .categories {
+                color: #605D5D;
+                font-size: 14.0px;
+                font-family: Helvetica, sans-serif;
+                font-style: italic;
+            }
+            .rating {
+                color: #d10505;
+                font-size: 14.0px;
+            }
+            .metadata {
+                font-size: 14.0px;
+            }
+            .infobox p {
+                margin: 0;
+                line-height: 150%;
+            }
+            .subhead {
+                color: #d10505;
+                font-weight: bold;
+                font-size: 14.0px;
+                text-transform: uppercase;
+                margin: 10px 0;
+            }
+            .ingredients p {
+                margin: 4px 0;
+            }
+            .clear {
+                clear:both;
+            }
+            a {
+                color: #4990E2;
+                text-decoration: none;
+            }
+            /* Full page specific styles */
+            .text {
+                line-height: 130%;
+            }
+            .photobox {
+                float: left;
+                margin-right: 14px;
+            }
+            .photo {
+                
+                
+                max-width: 140px;
+                max-height: 140px;
+                width: auto;
+                height: auto;
+                
+            }
+            .columnbox {
+                
+            }
+            .inline-image {
+                max-width: 140px;
+                max-height: 140px;
+                width: auto;
+                height: auto;
+            }
+            .photoswipe {
+                border: 1px #dddddd solid;
+                cursor: pointer;
+            }
+            .pswp__caption__center {
+                text-align: center !important;
+            }
+        
+            /* Claude-authored recipe marker */
+            .claude-banner {
+                background: #f3eefc;
+                border-left: 4px solid #7b5cc4;
+                color: #4a3a75;
+                font-size: 13.0px;
+                padding: 8px 12px;
+                margin: 0 0 14px 0;
+                border-radius: 4px;
+            }
+            .photo-credit {
+                font-size: 11.0px;
+                color: #888;
+                margin-top: 20px;
+            }
+            .ingredients .group {
+                margin-top: 12px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Recipe -->
+<div class="recipe" itemscope itemtype="http://schema.org/Recipe">
+
+    <p class="claude-banner">AI-generated recipe by <b>Claude</b> (Anthropic), added Nov 2026. It isn't one of the original collection and hasn't been kitchen-tested yet. Nutrition values are estimates.</p>
+
+    <div class="infobox">
+
+        <div class="photobox">
+            <img src="Images/web/greek-yogurt-recovery-bowl.jpg" itemprop="image" class="photo" alt="Greek Yogurt Recovery Bowl"/>
+        </div>
+
+        <!-- Name -->
+        <h1 itemprop="name" class="name">Greek Yogurt Recovery Bowl</h1>
+
+        <p itemprop="recipeCategory" class="categories">Recovery, Breakfast, Snack, Quick, By Claude</p>
+
+        <p class="metadata">
+            <b>Prep Time: </b><span itemprop="prepTime">3 minutes</span>
+            <b>Cook Time: </b><span itemprop="cookTime">None</span>
+            <b>Servings: </b><span itemprop="recipeYield">1 serving</span>
+            <b>Source: </b><span itemprop="author">Claude (AI-generated)</span>
+        </p>
+
+        <div class="clear"></div>
+
+    </div>
+
+    <div class="columnbox">
+        <div class="ingredientsbox">
+            <h3 class="subhead">Ingredients</h3>
+            <div class="ingredients text">
+                <p class="line" itemprop="recipeIngredient"><strong>1</strong> cup plain 2% Greek yogurt</p><p class="line" itemprop="recipeIngredient"><strong>1</strong> banana, sliced (or 1 cup berries)</p><p class="line" itemprop="recipeIngredient"><strong>1</strong> tablespoon honey</p><p class="line" itemprop="recipeIngredient"><strong>1/4</strong> cup granola</p><p class="line" itemprop="recipeIngredient">Pinch of cinnamon and flaky salt</p><p class="line group"><b>Optional</b></p><p class="line" itemprop="recipeIngredient"><strong>1/2</strong> scoop whey protein, stirred into the yogurt (+12g protein)</p><p class="line" itemprop="recipeIngredient"><strong>1</strong> tablespoon chia or hemp seeds</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="descriptionbox">
+        <h3 class="subhead">Description</h3>
+        <div itemprop="description" class="description text">
+            <p>A no-cook recovery option with protein and carbs. Stir in a scoop of whey for a bigger protein hit.</p>
+        </div>
+    </div>
+
+    <div class="directionsbox">
+        <h3 class="subhead">Directions</h3>
+        <div itemprop="recipeInstructions" class="directions text">
+            <p class="line">Stir the whey into the yogurt if using, adding a splash of milk to loosen.</p><p class="line">Top with banana, honey, granola, cinnamon, and salt.</p><p class="line">To prep ahead: portion the yogurt into jars for the week and keep the granola separate so it stays crunchy.</p>
+        </div>
+    </div>
+
+<div class="nutritionbox textbox">
+    <h3 class="subhead">Nutrition (estimated, per serving)</h3>
+    <div itemprop="nutrition" class="nutrition text">
+        <p>~455 CALORIES <br/>27G PROTEIN <br/>10G FAT <br/>68G CARBS <br/>5G FIBER</p>
+    </div>
+</div>
+
+<p class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Double_choc_yogurt.jpg">Double choc yogurt.jpg</a> by 1997SPP, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons. Representative image, not this exact recipe.</p>
+
+</div>
+    </body>
+</html>

@@ -120,6 +120,22 @@
       font-style: italic;
     }
 
+    .claude-placeholder {
+      background-color: #f3eefc;
+      color: #7b5cc4;
+      font-style: italic;
+    }
+
+    .claude-tag {
+      display: inline-block;
+      font-size: 11px;
+      color: #7b5cc4;
+      background-color: #f3eefc;
+      border-radius: 10px;
+      padding: 1px 8px;
+      margin: 0 0 4px 0;
+    }
+
     .footer-note {
       text-align: center;
       font-size: 12px;
@@ -156,13 +172,17 @@
 </head>
 
 <body>
-  <h1>Recipes (37)</h1>
+  <h1>Recipes (51)</h1>
 
   <div class="sort-controls">
     <span class="sort-label">Sort by:</span>
     <button class="sort-button active" data-sort="alpha">Alphabetical</button>
     <button class="sort-button" data-sort="protein">Protein Content</button>
     <button class="sort-button" data-sort="ratio">Protein:Calorie Ratio</button>
+    <span class="sort-label" style="margin-left: 16px;">Show:</span>
+    <button class="sort-button filter-button active" data-filter="all">All</button>
+    <button class="sort-button filter-button" data-filter="original">Originals</button>
+    <button class="sort-button filter-button" data-filter="claude">By Claude</button>
   </div>
 
   <div class="recipe-grid" id="recipe-grid">
@@ -493,15 +513,128 @@
       <h3 class="recipe-name">Wild Mushroom Sauce Fusilli</h3>
       <p class="nutrition-info ai-inferred">450 cal | 14g protein*</p>
     </a>
+
+    <a href="/recipes/savory-instant-pot-steel-cut-oats.html" class="recipe-tile by-claude" data-name="Savory Instant Pot Steel-Cut Oats"
+      data-calories="400" data-protein="29" data-author="claude">
+      <img src="Images/web/savory-instant-pot-steel-cut-oats.jpg" class="recipe-image" alt="Savory Instant Pot Steel-Cut Oats">
+      <h3 class="recipe-name">Savory Instant Pot Steel-Cut Oats</h3>
+      <p class="claude-tag">by Claude</p>
+      <p class="nutrition-info ai-inferred">400 cal | 29g protein*</p>
+    </a>
+
+    <a href="/recipes/batch-jammy-eggs.html" class="recipe-tile by-claude" data-name="Batch Jammy Eggs"
+      data-calories="140" data-protein="12" data-author="claude">
+      <img src="Images/web/batch-jammy-eggs.jpg" class="recipe-image" alt="Batch Jammy Eggs">
+      <h3 class="recipe-name">Batch Jammy Eggs</h3>
+      <p class="claude-tag">by Claude</p>
+      <p class="nutrition-info ai-inferred">140 cal | 12g protein*</p>
+    </a>
+
+    <a href="/recipes/dijon-maple-pork-tenderloin-with-sweet-potatoes-and-apples.html" class="recipe-tile by-claude" data-name="Dijon-Maple Pork Tenderloin with Sweet Potatoes &amp; Apples"
+      data-calories="440" data-protein="40" data-author="claude">
+      <img src="Images/web/dijon-maple-pork-tenderloin-with-sweet-potatoes-and-apples.jpg" class="recipe-image" alt="Dijon-Maple Pork Tenderloin with Sweet Potatoes &amp; Apples">
+      <h3 class="recipe-name">Dijon-Maple Pork Tenderloin with Sweet Potatoes &amp; Apples</h3>
+      <p class="claude-tag">by Claude</p>
+      <p class="nutrition-info ai-inferred">440 cal | 40g protein*</p>
+    </a>
+
+    <a href="/recipes/chimichurri-flank-steak-with-roasted-baby-potatoes.html" class="recipe-tile by-claude" data-name="Chimichurri Flank Steak with Roasted Baby Potatoes"
+      data-calories="540" data-protein="41" data-author="claude">
+      <img src="Images/web/chimichurri-flank-steak-with-roasted-baby-potatoes.jpg" class="recipe-image" alt="Chimichurri Flank Steak with Roasted Baby Potatoes">
+      <h3 class="recipe-name">Chimichurri Flank Steak with Roasted Baby Potatoes</h3>
+      <p class="claude-tag">by Claude</p>
+      <p class="nutrition-info ai-inferred">540 cal | 41g protein*</p>
+    </a>
+
+    <a href="/recipes/freezer-chicken-marinades-five-ways.html" class="recipe-tile by-claude" data-name="Freezer Chicken Marinades, Five Ways"
+      data-calories="320" data-protein="50" data-author="claude">
+      <img src="Images/web/freezer-chicken-marinades-five-ways.jpg" class="recipe-image" alt="Freezer Chicken Marinades, Five Ways">
+      <h3 class="recipe-name">Freezer Chicken Marinades, Five Ways</h3>
+      <p class="claude-tag">by Claude</p>
+      <p class="nutrition-info ai-inferred">320 cal | 50g protein*</p>
+    </a>
+
+    <a href="/recipes/chicken-sausage-white-bean-and-kale-skillet.html" class="recipe-tile by-claude" data-name="Chicken Sausage, White Bean &amp; Kale Skillet"
+      data-calories="410" data-protein="31" data-author="claude">
+      <img src="Images/web/chicken-sausage-white-bean-and-kale-skillet.jpg" class="recipe-image" alt="Chicken Sausage, White Bean &amp; Kale Skillet">
+      <h3 class="recipe-name">Chicken Sausage, White Bean &amp; Kale Skillet</h3>
+      <p class="claude-tag">by Claude</p>
+      <p class="nutrition-info ai-inferred">410 cal | 31g protein*</p>
+    </a>
+
+    <a href="/recipes/chicken-sausage-potato-and-pepper-sheet-pan.html" class="recipe-tile by-claude" data-name="Chicken Sausage, Potato &amp; Pepper Sheet Pan"
+      data-calories="500" data-protein="33" data-author="claude">
+      <img src="Images/web/chicken-sausage-potato-and-pepper-sheet-pan.jpg" class="recipe-image" alt="Chicken Sausage, Potato &amp; Pepper Sheet Pan">
+      <h3 class="recipe-name">Chicken Sausage, Potato &amp; Pepper Sheet Pan</h3>
+      <p class="claude-tag">by Claude</p>
+      <p class="nutrition-info ai-inferred">500 cal | 33g protein*</p>
+    </a>
+
+    <a href="/recipes/batch-shakshuka-with-chicken-sausage.html" class="recipe-tile by-claude" data-name="Batch Shakshuka with Chicken Sausage"
+      data-calories="490" data-protein="33" data-author="claude">
+      <img src="Images/web/batch-shakshuka-with-chicken-sausage.jpg" class="recipe-image" alt="Batch Shakshuka with Chicken Sausage">
+      <h3 class="recipe-name">Batch Shakshuka with Chicken Sausage</h3>
+      <p class="claude-tag">by Claude</p>
+      <p class="nutrition-info ai-inferred">490 cal | 33g protein*</p>
+    </a>
+
+    <a href="/recipes/batch-carbs-rice-farro-and-roasted-potatoes.html" class="recipe-tile by-claude" data-name="Batch Carbs: Rice, Farro &amp; Roasted Potatoes"
+      data-calories="205" data-protein="4" data-author="claude">
+      <img src="Images/web/batch-carbs-rice-farro-and-roasted-potatoes.jpg" class="recipe-image" alt="Batch Carbs: Rice, Farro &amp; Roasted Potatoes">
+      <h3 class="recipe-name">Batch Carbs: Rice, Farro &amp; Roasted Potatoes</h3>
+      <p class="claude-tag">by Claude</p>
+      <p class="nutrition-info ai-inferred">205 cal | 4g protein*</p>
+    </a>
+
+    <a href="/recipes/recovery-smoothie-freezer-packs.html" class="recipe-tile by-claude" data-name="Recovery Smoothie Freezer Packs"
+      data-calories="420" data-protein="35" data-author="claude">
+      <img src="Images/web/recovery-smoothie-freezer-packs.jpg" class="recipe-image" alt="Recovery Smoothie Freezer Packs">
+      <h3 class="recipe-name">Recovery Smoothie Freezer Packs</h3>
+      <p class="claude-tag">by Claude</p>
+      <p class="nutrition-info ai-inferred">420 cal | 35g protein*</p>
+    </a>
+
+    <a href="/recipes/greek-yogurt-recovery-bowl.html" class="recipe-tile by-claude" data-name="Greek Yogurt Recovery Bowl"
+      data-calories="455" data-protein="27" data-author="claude">
+      <img src="Images/web/greek-yogurt-recovery-bowl.jpg" class="recipe-image" alt="Greek Yogurt Recovery Bowl">
+      <h3 class="recipe-name">Greek Yogurt Recovery Bowl</h3>
+      <p class="claude-tag">by Claude</p>
+      <p class="nutrition-info ai-inferred">455 cal | 27g protein*</p>
+    </a>
+
+    <a href="/recipes/long-run-rice-cakes.html" class="recipe-tile by-claude" data-name="Long-Run Rice Cakes"
+      data-calories="150" data-protein="3" data-author="claude">
+      <img src="Images/web/long-run-rice-cakes.jpg" class="recipe-image" alt="Long-Run Rice Cakes">
+      <h3 class="recipe-name">Long-Run Rice Cakes</h3>
+      <p class="claude-tag">by Claude</p>
+      <p class="nutrition-info ai-inferred">150 cal | 3g protein*</p>
+    </a>
+
+    <a href="/recipes/butcher-counter-fish-and-rice-bowl.html" class="recipe-tile by-claude" data-name="Butcher Counter Fish &amp; Rice Bowl"
+      data-calories="430" data-protein="42" data-author="claude">
+      <img src="Images/web/butcher-counter-fish-and-rice-bowl.jpg" class="recipe-image" alt="Butcher Counter Fish &amp; Rice Bowl">
+      <h3 class="recipe-name">Butcher Counter Fish &amp; Rice Bowl</h3>
+      <p class="claude-tag">by Claude</p>
+      <p class="nutrition-info ai-inferred">430 cal | 42g protein*</p>
+    </a>
+
+    <a href="/recipes/avocado-toast-with-eggs.html" class="recipe-tile" data-name="Avocado Toast with Eggs"
+      data-calories="415" data-protein="21">
+      <img src="Images/web/avocado-toast-with-eggs.jpg" class="recipe-image" alt="Avocado Toast with Eggs">
+      <h3 class="recipe-name">Avocado Toast with Eggs</h3>
+      <p class="nutrition-info ai-inferred">415 cal | 21g protein*</p>
+    </a>
   </div>
 
-  <p class="footer-note">* Nutrition values with asterisks are AI-inferred estimates based on ingredients</p>
+  <p class="footer-note">* Nutrition values with asterisks are AI-inferred estimates based on ingredients<br>
+    Recipes tagged <span class="claude-tag">by Claude</span> are AI-generated additions (Nov 2026), separate from the original collection</p>
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       // Get recipe container and buttons
       const recipeGrid = document.getElementById('recipe-grid');
-      const sortButtons = document.querySelectorAll('.sort-button');
+      const sortButtons = document.querySelectorAll('.sort-button[data-sort]');
+      const filterButtons = document.querySelectorAll('.filter-button');
 
       // Convert recipes to array for sorting
       const recipes = Array.from(recipeGrid.children);
@@ -542,6 +675,20 @@
 
           // Sort recipes by selected method
           sortRecipes(this.dataset.sort);
+        });
+      });
+
+      // Filter originals vs. Claude-authored recipes
+      filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          filterButtons.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          const filter = this.dataset.filter;
+          recipes.forEach(recipe => {
+            const isClaude = recipe.dataset.author === 'claude';
+            const show = filter === 'all' || (filter === 'claude') === isClaude;
+            recipe.style.display = show ? '' : 'none';
+          });
         });
       });
 
