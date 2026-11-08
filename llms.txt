@@ -1,0 +1,25 @@
+# Steven Liss
+
+> Co-founder & CEO at OpenAds.ai. Previously co-founder & CTO at Polis (acquired).
+
+Relevant skills: software engineering, product management, behavioral economics.
+Irrelevant skills: standup comedy, drone photography, fencing, cooking.
+
+## Pages
+
+- [Home](https://stevenliss.com/)
+- [Recipes](https://stevenliss.com/recipes/index.html)
+- [Markov models for political speechwriting](https://stevenliss.com/markov.html)
+- [Palette as destiny: startup logo colors over time](https://stevenliss.com/yc-logo-colors.html)
+- [YComparator](https://ycomparator.stevenliss.com/)
+- [LLM fugue maker](https://stevenliss.com/fugue/zanarkand_codex_fugue.html)
+
+## Elsewhere
+
+- [OpenAds.ai](https://openads.ai/)
+- [Substack](https://stevenliss.substack.com/)
+- [GitHub](https://github.com/sliss)
+- [LinkedIn](https://www.linkedin.com/in/stevenliss/)
+- [Twitter](https://twitter.com/This_Liss)
+- [Instagram](https://www.instagram.com/steveventures/)
+- [Travel blog](https://www.passportoverflow.com/)

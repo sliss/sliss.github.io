@@ -1,0 +1,20 @@
+name = "ua-router"
+account_id = "78be032023ed56c38bd820574af16a28" # Stevenliss45@gmail.com's Account (owns stevenliss.com)
+main = "worker.js"
+compatibility_date = "2025-09-01"
+
+routes = [
+  { pattern = "stevenliss.com/*", zone_name = "stevenliss.com" }
+]
+
+# Bundle the per-bot landing pages as plain strings (import X from "./index.foo.html").
+[[rules]]
+type = "Text"
+globs = ["**/*.html"]
+fallthrough = true
+
+[[d1_databases]]
+binding = "DB"
+database_name = "agent-guestbook"
+database_id = "d7e17d99-9140-4070-9229-c08e9ec13184"
+migrations_dir = "migrations"
